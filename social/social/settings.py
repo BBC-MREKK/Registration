@@ -34,8 +34,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.apple',
-
     'crispy_forms',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -172,7 +172,7 @@ SOCIALACCOUNT_PROVIDERS = {
         'SCOPE': ['name', 'email'],
         'AUTH_PARAMS': {
             'response_type': 'code id_token',
-        }
+        },
     }
 }
 
@@ -186,6 +186,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 ACCOUNT_EMAIL_REQUIRED = True
 
-SOCIALACCOUNT_QUERY_EMAIL = True
+SOCIAL_ACCOUNT_QUERY_EMAIL = True
 
 ACCOUNT_SESSION_REMEMBER = True
